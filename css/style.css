@@ -1,0 +1,669 @@
+:root {
+    --primary: #34A2F9;
+    --secondary : #2379BD;
+    --grey : #686868;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 1000px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-logo img {
+    width: 4rem;
+}
+
+.navbar .navbar-logo a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a{
+    color: black;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a.active-page {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* Hero */
+.hero,
+.tentang-kami,
+.statistik-pendaftaran,
+.kegiatan-siswa {
+    margin-top: 7.1rem;
+}
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 51rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    object-fit: fill;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content {
+    display: inline-block;
+    position: absolute;
+    color: white;
+    width: 55%;
+    text-align: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content h1,
+.swiper .swiper-wrapper .swiper-slide .content p{
+    font-size: 3.5rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content p,
+.swiper .swiper-wrapper .swiper-slide .content ol{
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content ol,
+.tentang-kami .content ol {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content ol li {
+    padding: 1rem 0;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content a{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+
+.swiper .swiper-wrapper .swiper-slide .content a:hover {
+    background-color: white;
+    color: var(--primary);
+    border: none;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    padding: 0 8rem;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+}
+
+span.swiper-pagination-bullet {
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    opacity: 50%;
+}
+
+span.swiper-pagination-bullet-active {
+    background-color: white;
+    opacity: 100%;
+}
+
+/* Kurikulum */
+.kurikulum,
+.hubungi-kami,
+.tentang-kami,
+.statistik-pendaftaran,
+.kegiatan-siswa {
+    padding: 4rem 7% 3rem;
+}
+
+.kurikulum .judul,
+.hubungi-kami .judul,
+.tentang-kami .judul,
+.tentang-kami .content.tabel-guru-dan-karyawan,
+.statistik-pendaftaran .judul,
+.kegiatan-siswa .judul {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.kurikulum .judul h2,
+.hubungi-kami .judul h2,
+.tentang-kami .judul h2, 
+.tentang-kami .content.tabel-guru-dan-karyawan h2,
+.statistik-pendaftaran .judul h2,
+.kegiatan-siswa .judul h2{
+    color: black;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.kurikulum .judul p,
+.hubungi-kami .judul p,
+.tentang-kami .judul p,
+.statistik-pendaftaran .judul p,
+.kegiatan-siswa .judul p {
+    font-size: 1.2rem;
+    padding: 0.5rem 20% 0;
+    color: var(--grey);
+    font-weight: 300;
+}
+
+.kurikulum .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.kurikulum .content .card {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 35rem;
+    height: 42vh;
+    padding: 1.5rem 3.5rem;
+}
+
+.kurikulum .content .card ul li {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+}
+
+/* Hubungi Kami */
+.hubungi-kami .content .maps {
+    width: 100%;
+    height: 50rem;
+    margin-bottom: 2rem;
+}
+
+.hubungi-kami .content .field {
+    margin-bottom: 2rem;
+}
+
+.hubungi-kami .content form .field h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.hubungi-kami .content form .field input,
+.hubungi-kami .content form .field textarea {
+    width: 100%;
+    border: 1px solid black;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.hubungi-kami .content form .field textarea {
+    height: 20rem;
+}
+
+.hubungi-kami .content form button {
+    width: 100%;
+    color: white;
+    background-color: var(--primary);
+    padding: 2rem 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.hubungi-kami .content form button:hover {
+    color: var(--primary);
+    background-color: white;
+    border: 1px solid var(--primary);
+}
+
+/* Tentang Kami */
+.tentang-kami,
+.statistik-pendaftaran,
+.kegiatan-siswa {
+    padding-bottom: 0rem;
+}
+
+.tentang-kami .tentang-dan-daftar-guru,
+.statistik-pendaftaran .gambar-statistik-pendaftaran,
+.kegiatan-siswa .content .ukrida-tematik {
+    width: 100%;
+}
+
+.tentang-kami .tentang-dan-daftar-guru.mb,
+.statistik-pendaftaran .gambar-statistik-pendaftaran.mb {
+    margin-bottom: 3rem;
+}
+
+.tentang-kami .content {
+    margin-bottom: 2rem;
+}
+
+.tentang-kami .content.tabel-guru-dan-karyawan h2 {
+    padding: 5rem 0 1rem;
+}
+
+.tentang-kami .content h3,
+.statistik-pendaftaran .content h3,
+.kegiatan-siswa .content h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.statistik-pendaftaran .content h3 {
+    margin-bottom: 2rem;
+}
+
+.tentang-kami .content p,
+.tentang-kami .content ol,
+.kegiatan-siswa .content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.tentang-kami .content ol {
+    padding-left: 1.8rem;
+}
+
+.tentang-kami .content ol li {
+    padding: 1rem 0;
+}
+
+.tentang-kami .content.tabel-guru-dan-karyawan h2 {
+    margin-bottom: 2rem;
+}
+
+/* Statistik Pendaftaran */
+.statistik-pendaftaran .content {
+    margin-bottom: 4rem;
+}
+
+/* Kegiatan Siswa */
+.kegiatan-siswa .content h3{
+    font-size: 2.5rem;
+}
+
+.kegiatan-siswa .content .ukrida-tematik {
+    margin: 3rem 0 2rem;
+}
+
+.kegiatan-siswa .content p {
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    color: white;
+    background-color: var(--secondary);
+    margin-top: 5rem;
+    padding: 2rem 7%;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem 2rem;
+}
+
+footer .container .description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+footer .container .description.menu {
+    justify-self: center;
+}
+
+footer .container .description.hubungi {
+    justify-self: right;
+}
+
+footer .container .description h2{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+footer .container .description .subtext {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+footer .container .description .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+footer .container .description .socials.location {
+    align-items: flex-start;
+}
+
+footer .container .description .socials .icon {
+    width: 2.5rem;
+}
+
+footer .container .description .socials p {
+    width: 100%;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+}
+
+footer .container .description a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.4rem;
+}
+
+footer .container .description a:hover {
+    color: var(--primary);
+}
+
+/* Media Queries */
+
+/* Super Extra Large */
+@media (max-width: 1536px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+/* Extra Extra Large */
+@media (max-width: 1405px) {
+    html {
+        font-size: 82%;
+    }
+
+    .kurikulum .content .card {
+        height: 40vh;
+    }
+}
+
+/* Extra Large */
+@media (max-width: 1270px) {
+    html {
+        font-size: 72%;
+    }
+
+    .kurikulum .content .card {
+        height: 35vh;
+    }
+}
+
+/* Large */
+@media (max-width: 1120px) {
+    html {
+        font-size: 65%;
+    }
+
+    .kurikulum .content .card {
+        height: 30vh;
+    }
+}
+
+/* Landscape tablet */
+@media (max-width: 1010px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: white;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a{
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-logo a {
+        font-size: 2.5rem;
+    }
+
+    .kurikulum .content .card {
+        height: 26vh;
+    }
+
+    .kurikulum .judul p, 
+    .hubungi-kami .judul p,
+    .tentang-kami .judul p,
+    .statistik-pendaftaran .judul p,
+    .kegiatan-siswa .judul p {
+        padding: 0 10% 0;
+    }
+
+    footer .container {
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    }
+
+    footer .container .description.menu {
+        justify-self: center;
+    }
+
+    footer .container .description.hubungi {
+        justify-self: left;
+    }
+}
+
+@media (max-width: 980px) {
+    .swiper .swiper-wrapper .swiper-slide .content.visi h1,
+    .swiper .swiper-wrapper .swiper-slide .content.visi p{
+        text-align: center;
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        padding: 0 5rem;
+    }
+    
+    .swiper .swiper-wrapper .swiper-slide .content {
+        width: 70%;
+    }
+
+    .kurikulum .content {
+        gap: 5rem;
+    }
+}
+
+/* Portrait Tablet */
+@media (max-width: 786px) {
+    html {
+        font-size: 60%;
+    }
+
+    .tentang-kami .content.tabel-guru-dan-karyawan .tentang-dan-daftar-guru {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 709px) {
+    html {
+        font-size: 55%;
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        padding: 0 3rem;
+    }
+    
+    .swiper .swiper-wrapper .swiper-slide .content {
+        width: 60%;
+    }
+}
+
+/* Handphone */
+@media (max-width: 637px) {
+    html {
+        font-size: 50%;
+    }
+
+    .kurikulum .content .card {
+        height: 24vh;
+    }
+}
+
+@media (max-width: 593px) {
+    footer .container .description.menu{
+        justify-self: left;
+    }
+} 
+
+@media (max-width: 565px) {
+    html {
+        font-size: 45%;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .content {
+        width: 65%;
+    }
+
+    .swiper .swiper-button-prev {
+        padding-left: 5rem;
+    }
+
+    footer .container .description.menu{
+        justify-self: right;
+    }
+
+    .swiper .swiper-button-next {
+        padding-right: 5rem;
+    }
+}
+
+@media (max-width: 536px) {
+    footer .container .description.menu{
+        justify-self: left;
+    }
+
+    footer .container .description h2 {
+        font-size: 3rem;
+    }
+
+    footer .container .description .subtext {
+        font-size: 2.2rem;
+    }
+
+    footer .container .description .socials .icon {
+        width: 3rem;
+    }
+
+    footer .container .description .socials p,
+    footer .container .description a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 460px) {
+    html {
+        font-size: 40%;
+    }
+    
+    .kurikulum .content .card {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 35%;
+    }
+}
