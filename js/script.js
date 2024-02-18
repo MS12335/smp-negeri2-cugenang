@@ -36,7 +36,7 @@ const sendWhatsAppMessage = () => {
 
     let encodedMessage = encodeURIComponent(templateMessage);
 
-    let whatsappURL = "https://wa.me/6287872611668?text=" + encodedMessage;
+    let whatsappURL = "https://wa.me/6287878951653?text=" + encodedMessage;
 
     window.open(whatsappURL);
 }
